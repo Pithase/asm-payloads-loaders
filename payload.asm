@@ -31,8 +31,8 @@ _start:
     add rsp, 16 ;recupero la pila
 
     push 60
-	pop rax
-	xor rdi, rdi
+    pop rax
+    xor rdi, rdi
     syscall
 
 
