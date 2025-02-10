@@ -34,5 +34,3 @@ _start:
     pop rax
     xor rdi, rdi
     syscall
-
-
