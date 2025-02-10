@@ -7,7 +7,7 @@ Una vez avanzada la serie, se publicará en forma detallada el paso a paso para 
 ## Ejemplos
 
 1. **Payload para Ejemplos**  
-   [payload.asm](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload.asm)  
+   [payload-read-file-short.asm](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload-read-file-short.asm)  
    Payload de 49 bytes.
    
    [payload4KBlarger.asm](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload4KBlarger.asm)  
