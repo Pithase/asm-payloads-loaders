@@ -10,4 +10,4 @@ Desarrollo paso a paso de cargadores de payloads, escritos exclusivamente en **E
 
 2. **Carga de Payload desde un Archivo**  
    [payload-read-file.asm](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload-read-file.asm)  
-   Carga un payload contenido en un archivo. Tamaño máximo paylaod 4KB.
+   Carga un payload contenido en un archivo. Tamaño máximo del paylaod 4KB.
