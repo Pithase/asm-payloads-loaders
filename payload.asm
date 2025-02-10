@@ -7,10 +7,10 @@
 ; Arquitectura : x86-64
 ; Descripción  : Payload de prueba para los ejemplos de los loaders
 ;
-; Para usar como Payload
+; Para usarlo como Payload
 ; Compilar     : nasm -f bin payload.asm -o payload.bin
 ;
-; Ejecutarlo en forma independiente
+; Para ejecutarlo en forma independiente
 ; Compilar     : nasm -f elf64 payload.asm -o payload.o
 ; Linkear      : ld payload.o -o payload
 ; Ejecutar     : ./payload
