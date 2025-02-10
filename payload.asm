@@ -1,13 +1,19 @@
 ;======================================================================
 ; Archivo      : payload.asm
 ; Creado       : 08/02/2025
-; Modificado   : 08/02/2025
+; Modificado   : 10/02/2025
 ; Autor        : Gastón M. González
 ; Plataforma   : Linux
 ; Arquitectura : x86-64
 ; Descripción  : Payload de prueba para los ejemplos de los loaders
 ;
+; Para usar como Payload
 ; Compilar     : nasm -f bin payload.asm -o payload.bin
+;
+; Ejecutarlo en forma independiente
+; Compilar     : nasm -f elf64 payload.asm -o payload.o
+; Linkear      : ld payload.o -o payload
+; Ejecutar     : ./payload
 ;======================================================================
 
 BITS 64
