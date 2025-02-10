@@ -13,6 +13,10 @@ Una vez avanzada la serie, se publicará en forma detallada el paso a paso para 
    [payload4KBlarger.asm](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload4KBlarger.asm)  
    Payload de 5.088 bytes.
 
-3. **Carga de Payload desde un Archivo (<= 4KB)**  
-   [payload-read-file.asm](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload-read-file.asm)  
+2. **Carga de Payload desde un Archivo (<= 4KB)**  
+   [payload-read-file-short.asm](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload-read-file-short.asm)  
    Carga un payload contenido en un archivo. Tamaño máximo del paylaod 4KB.
+
+3. **Carga de Payload desde un Archivo con reserva de memoria dinámica según el tamaño del payload**  
+   [payload-read-file.asm](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload-read-file.asm)  
+   Carga un payload contenido en un archivo. Sin límite de tamaño.
