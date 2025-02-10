@@ -19,4 +19,4 @@ Una vez avanzada la serie, se publicará en forma detallada el paso a paso para 
 
 3. **Carga de Payload desde un Archivo con reserva de memoria dinámica según el tamaño del payload**  
    [payload-read-file.asm](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload-read-file.asm)  
-   Carga un payload contenido en un archivo. Sin límite de tamaño.
+   Carga un payload contenido en un archivo.
