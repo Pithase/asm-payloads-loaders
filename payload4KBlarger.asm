@@ -7,7 +7,13 @@
 ; Arquitectura : x86-64
 ; Descripción  : Payload de prueba (+4KB) para los ejemplos de los loaders
 ;
+; Para usarlo como Payload
 ; Compilar     : nasm -f bin payload4KBlarger.asm -o payload4KBlarger.bin
+;
+; Para ejecutarlo en forma independiente
+; Compilar     : nasm -f elf64 payload4KBlarger.asm -o payload4KBlarger.o
+; Linkear      : ld payload4KBlarger.o -o payload4KBlarger
+; Ejecutar     : ./payload4KBlarger
 ;===========================================================================
 
 BITS 64
