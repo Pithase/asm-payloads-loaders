@@ -1,6 +1,6 @@
 # Archivos binarios
 
-Disponibles para ser descargados vía http, cuando los ejemplos lo requieran.
+Links de los payloads, para referenciarlos, cuando los necesiten.
 
 1. **Payload para Ejemplos**  
    [http://pithase.com.ar/bin/payload.bin](http://pithase.com.ar/bin/payload.bin)  
