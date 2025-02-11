@@ -26,5 +26,5 @@ Una vez avanzada la serie, se publicará en forma detallada el paso a paso para 
    Carga un payload contenido en un archivo.
 
 5. **Carga de Payload desde HTTP (no HTTPS), con payload <= 4KB**  
-   [https://github.com/Pithase/asm-payloads-loaders/blob/main/payload-read-http-file-size-fixed.asm](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload-read-http-file-size-fixed.asm)  
+   [payload-read-http-file-size-fixed.asm](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload-read-http-file-size-fixed.asm)  
    Carga un payload a través de HTTP.
