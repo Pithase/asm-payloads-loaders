@@ -10,6 +10,7 @@
 ; Compilar     : nasm -f elf64 payload-read-file.asm -o payload-read-file.o
 ; Linkear      : ld payload-read-file.o -o payload-read-file
 ; Ejecutar     : ./payload-read-file
+; Ejecutar     : ./payload-read-file ; echo "Código de salida:" $?
 ;======================================================================
 	
 section .rodata
