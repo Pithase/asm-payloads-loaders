@@ -1,6 +1,6 @@
 # Archivos binarios
 
-Disponibles para ser descargados vía http.
+Disponibles para ser descargados vía http, cuando los ejemplos lo requieran.
 
 1. **Payload para Ejemplos**  
    [http://github.com/Pithase/asm-payloads-loaders/raw/refs/heads/main/bin/payload.bin](http://github.com/Pithase/asm-payloads-loaders/raw/refs/heads/main/bin/payload.bin)  
