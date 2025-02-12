@@ -47,8 +47,8 @@ section .rodata
 
 section .bss
     sockfd     resq 1
-    buffer     resb 8192          ; espacio para el HTTP response (header + payload)
-    exec_mem   resq 1             ; dirección de memoria ejecutable (asignada con mmap)
+    buffer     resb 8192          ; espacio para la respuesta HTTP (header + payload)
+    exec_mem   resq 1             ; ddirección de memoria ejecutable (reservada con mmap)
     payload    resb payload_len   ; espacio para almacenar el payload
 
 section .text
@@ -195,12 +195,14 @@ mmap_error:
     jmp exit_error
 
 exit_error:
+	push rdi
     mov rax, [sockfd]     ; si el socket fue abierto, cerrarlo.
     cmp rax, 0
     je exit
     mov rdi, rax
     mov rax, 3            ; syscall: close
     syscall
+    pop rdi
 
 exit:
     mov rax, 60           ; syscall: exit
