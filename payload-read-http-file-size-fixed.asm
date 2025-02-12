@@ -195,7 +195,7 @@ mmap_error:
     jmp exit_error
 
 exit_error:
-	push rdi
+    push rdi
     mov rax, [sockfd]     ; si el socket fue abierto, cerrarlo.
     cmp rax, 0
     je exit
