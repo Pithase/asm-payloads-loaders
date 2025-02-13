@@ -6,25 +6,27 @@ Una vez avanzada la serie, se publicará en forma detallada el paso a paso para 
 
 ## Ejemplos
 
-1. **Payload para Ejemplos**  
+1. **Payload para Ejemplos**   
    [payload-read-file-short.asm](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload-read-file-short.asm)  
    Payload de 49 bytes.
    
    [payload4KBlarger.asm](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload4KBlarger.asm)  
    Payload de 5.088 bytes.
 
-2. **Carga de Payload desde un Archivo (<= 4KB)**  
+   [Links de los archivos binarios](https://github.com/Pithase/asm-payloads-loaders/tree/main/bin)   
+
+3. **Carga de Payload desde un Archivo (<= 4KB)**  
    [payload-read-file-short.asm](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload-read-file-short.asm)  
 
-3. **Carga de Payload desde un Archivo con reserva de memoria dinámica según el tamaño del payload**  
+4. **Carga de Payload desde un Archivo con reserva de memoria dinámica según el tamaño del payload**  
    [payload-read-file.asm](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload-read-file.asm)  
 
-4. **Carga de Payload desde un Archivo, especificado por argumento, con reserva de memoria dinámica según el tamaño del payload**  
+5. **Carga de Payload desde un Archivo, especificado por argumento, con reserva de memoria dinámica según el tamaño del payload**  
    [payload-read-arg-file.asm](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload-read-arg-file.asm)  
 
-5. **Carga de Payload desde HTTP (no HTTPS), con payload <= 4KB**  
+6. **Carga de Payload desde HTTP (no HTTPS), con payload <= 4KB**  
    [payload-read-http-file-size-fixed.asm](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload-read-http-file-size-fixed.asm)  
 
-6. **Carga de Payload desde HTTP (no HTTPS), con payload <= 4KB y verificación de checksum**  
+7. **Carga de Payload desde HTTP (no HTTPS), con payload <= 4KB y verificación de checksum**  
    [payload-read-http-file-size-fixed-checksum.asm](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload-read-http-file-size-fixed-checksum.asm)  
    
