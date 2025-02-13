@@ -4,7 +4,7 @@ Desarrollo paso a paso de cargadores de payloads, escritos exclusivamente en **E
 
 Una vez avanzada la serie, publicaré en forma detallada el paso a paso para poder desarrollar cada uno de los ejemplos, aportando toda la documentación y explicaciones necesarias para que lo comprendas de punta a punta y no te quede absolutamente ninguna duda.
 
-Para sugerencias, consultas, correcciones o lo que sea referido a este repositorio, escribime a **repo-asm-payloads-loaders@pithase.com.ar**
+Para sugerencias, consultas, correcciones o lo que sea referido a este repositorio, escribime a `repo-asm-payloads-loaders@pithase.com.ar`
 
 
 ## Ejemplos
