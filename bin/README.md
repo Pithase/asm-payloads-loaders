@@ -1,7 +1,15 @@
 # Archivos binarios
 
-Links de los payloads, para referenciarlos, cuando los necesiten.
+Links de los payloads, para referenciarlos, cuando los necesites.
 
+Pasos a seguir para que puedas utilizar los links con **confianza** y tengas la certeza de que el payload del link corresponde al código fuente publicado.
+- descargar el payload
+- calcular el MD5, ejecutando  **md5sum** <nombre_payload_descargado>
+- comparar con el MD5 publicado, deben ser idénticos
+- compilar el payload
+- calcular el MD5, ejecutando **md5sum** <nombre_payload_compilado>
+- comparar con el MD5 publicado, deben ser idénticos   
+    
 1. **Payload para Ejemplos**  
    [http://pithase.com.ar/bin/payload.bin](http://pithase.com.ar/bin/payload.bin)  
    MD5: badde3c53e0cf86c52fffa1ea41ef27    
