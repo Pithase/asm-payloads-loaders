@@ -32,7 +32,7 @@ Dependiendo del tipo de payload, sigue el procedimiento correspondiente:
   ```
 - **Compara** el resultado con el MD5 publicado. ✅ **Deben ser idénticos**.
 
-#### 🔸 **Para Payloads Extendidos** (`payloadextend.sh` aplicado):
+#### 🔸 Para Payloads Extendidos ([`payloadextend.sh`](https://github.com/Pithase/asm-payloads-loaders/blob/main/payloadextend.sh) aplicado):
 - Ejecuta el script `payloadextend.sh` para extender el payload:
   ```sh
   ./payloadextend.sh <nombre_payload_compilado>
@@ -54,7 +54,7 @@ Dependiendo del tipo de payload, sigue el procedimiento correspondiente:
 | `http://pithase.com.ar/bin/payload.bin` | `badde3c53e0cf86c52fffa1ea41ef27` | 49 bytes |
 | `http://pithase.com.ar/bin/payload4KBlarger.bin` | `d20d72a7d7c05ed70d58aceec8031f29` | 5.088 bytes |
 
-### 🟠 **2️⃣ Payloads Extendidos (`payloadextend.sh` aplicado)**  
+### 🟠 **2️⃣ Payloads Extendidos ([`payloadextend.sh`](https://github.com/Pithase/asm-payloads-loaders/blob/main/payloadextend.sh) aplicado)**  
 
 | 🔗 Link | 🔑 MD5 | 📏 Tamaño |
 |------------------------------------------|----------------------------------|----------:|
