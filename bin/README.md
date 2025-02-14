@@ -48,18 +48,16 @@ Dependiendo del tipo de payload, sigue el procedimiento correspondiente:
 ## 📌 **Listado de Payloads**
 
 ### 🟢 **1️⃣ Payloads Estándar**  
-Estos son los archivos originales antes de aplicar `payloadextend.sh`.
 
 | 🔗 Link | 🔑 MD5 | 📏 Tamaño |
-|------------------------------------------|----------------------------------|----------|
+|------------------------------------------|----------------------------------|----------:|
 | `http://pithase.com.ar/bin/payload.bin` | `badde3c53e0cf86c52fffa1ea41ef27` | 49 bytes |
 | `http://pithase.com.ar/bin/payload4KBlarger.bin` | `d20d72a7d7c05ed70d58aceec8031f29` | 5.088 bytes |
 
 ### 🟠 **2️⃣ Payloads Extendidos (`payloadextend.sh` aplicado)**  
-Estos archivos han sido modificados con metadatos adicionales.
 
 | 🔗 Link | 🔑 MD5 | 📏 Tamaño |
-|------------------------------------------|----------------------------------|----------|
+|------------------------------------------|----------------------------------|----------:|
 | `http://pithase.com.ar/bin/payload-ext.bin` | `a845f257af8b9145ef61b17d2fb64db6` | 55 bytes |
 | `http://pithase.com.ar/bin/payload4KBlarger-ext.bin` | `7ef1ec1edd3c9080d6a7118afbbaf429` | 5.094 bytes |
 
