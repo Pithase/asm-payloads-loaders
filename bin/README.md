@@ -32,7 +32,7 @@ Dependiendo del tipo de payload, sigue el procedimiento correspondiente:
   ```
 - **Compara** el resultado con el MD5 publicado. ✅ **Deben ser idénticos**.
 
-#### 🔹 **Para Payloads Extendidos** (`payloadextend.sh` aplicado):
+#### 🔸 **Para Payloads Extendidos** (`payloadextend.sh` aplicado):
 - Ejecuta el script `payloadextend.sh` para extender el payload:
   ```sh
   ./payloadextend.sh <nombre_payload_compilado>
