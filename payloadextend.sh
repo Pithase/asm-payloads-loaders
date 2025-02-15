@@ -21,6 +21,12 @@
 #
 # Uso          : ./payloadextend.sh payload.bin
 #=========================================================================================================
+# Licencia MIT:
+# Este código es de uso libre bajo los términos de la Licencia MIT.
+# Puedes usarlo, modificarlo y redistribuirlo, siempre que incluyas esta nota de atribución.
+# NO HAY GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA.
+# Licencia completa en: https://github.com/Pithase/asm-payloads-loaders/blob/main/LICENSE
+#=========================================================================================================
 
 #---------------------------------------------------------------------------------------------------------
 # 1. Recupera el argumento del archivo binario
