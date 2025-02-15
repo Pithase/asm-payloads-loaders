@@ -31,7 +31,7 @@ Cargadores que leen un payload desde un archivo en disco.
 |------------|---------------|
 | [`payload-read-file-short.asm`](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload-read-file-short.asm) | Carga de un payload de un archivo **<= 4KB** |
 | [`payload-read-file.asm`](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload-read-file.asm) | Carga un payload desde archivo con **reserva de memoria dinámica** según su tamaño |
-| [`payload-read-arg-file.asm`](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload-read-arg-file.asm) | Permite especificar el **archivo como argumento** y realiza una **reserva de memoria dinámica** según su tamaño|
+| [`payload-read-arg-file.asm`](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload-read-arg-file.asm) | Permite especificar el **archivo como argumento** , lee su tamaño y **asigna memoria dinámica** según corresponda |
 
 ---
 
@@ -40,7 +40,7 @@ Cargadores que obtienen el payload desde una URL HTTP.
 
 | 🔗 Archivo | 📄 Descripción |
 |------------|---------------|
-| [`payload-read-http-file-size-fixed.asm`](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload-read-http-file-size-fixed.asm) | Carga un payload **<= 4KB** con un tamaño fijo definido en el código |
-| [`payload-read-http-file-size-fixed-checksum.asm`](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload-read-http-file-size-fixed-checksum.asm) | Carga un payload **<= 4KB** con un tamaño fijo definido en el código y **verifica el checksum** antes de ejecutar el payload |
+| [`payload-read-http-file-size-fixed.asm`](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload-read-http-file-size-fixed.asm) | Carga un payload **<= 4KB** con un tamaño predefinido en el código |
+| [`payload-read-http-file-size-fixed-checksum.asm`](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload-read-http-file-size-fixed-checksum.asm) | Carga un payload **<= 4KB** con un tamaño predefinido en el código y **verifica el checksum** antes de ejecutar el payload |
 
 --- 
