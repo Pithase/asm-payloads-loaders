@@ -1,4 +1,4 @@
-;===========================================================================
+;=============================================================================================
 ; Archivo      : payload4KBlarger.asm
 ; Creado       : 10/02/2025
 ; Modificado   : 10/02/2025
@@ -14,7 +14,13 @@
 ; Compilar     : nasm -f elf64 payload4KBlarger.asm -o payload4KBlarger.o
 ; Linkear      : ld payload4KBlarger.o -o payload4KBlarger
 ; Ejecutar     : ./payload4KBlarger
-;===========================================================================
+;=============================================================================================
+; Licencia MIT:
+; Este código es de uso libre bajo los términos de la Licencia MIT.
+; Puedes usarlo, modificarlo y redistribuirlo, siempre que incluyas esta nota de atribución.
+; NO HAY GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA.
+; Licencia completa en: https://github.com/Pithase/asm-payloads-loaders/blob/main/LICENSE
+;=============================================================================================
 
 BITS 64
 global _start
