@@ -16,8 +16,8 @@ Escribime a: ✉️ `repo-asm-payloads-loaders@pithase.com.ar`
 Archivos ASM que sirven como base para otros ejemplos.
 
 | 🔗 Archivo | 📏 Tamaño |
-|------------|----------|
-| [`payload-read-file-short.asm`](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload-read-file-short.asm) | 49 bytes |
+|------------|---------:|
+| [`payload.asm`](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload.asm) | 49 bytes |
 | [`payload4KBlarger.asm`](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload4KBlarger.asm) | 5.088 bytes |
 
 📎 **[Links de los archivos binarios](https://github.com/Pithase/asm-payloads-loaders/tree/main/bin)**  
