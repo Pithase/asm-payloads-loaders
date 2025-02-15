@@ -40,6 +40,6 @@ Cargadores que obtienen el payload desde una URL HTTP.
 | 🔗 Archivo | 📄 Descripción |
 |------------|---------------|
 | [`payload-read-http-file-size-fixed.asm`](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload-read-http-file-size-fixed.asm) | Carga un payload **<= 4KB** con un tamaño predefinido en el código |
-| [`payload-read-http-file-size-fixed-checksum.asm`](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload-read-http-file-size-fixed-checksum.asm) | Carga un payload **<= 4KB** con un tamaño predefinido en el código y **verifica el checksum** antes de ejecutar el payload |
+| [`payload-read-http-file-size-fixed-checksum.asm`](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload-read-http-file-size-fixed-checksum.asm) | Carga un payload **<= 4KB** con un tamaño y checksum predefinidos en el código, **verificando el checksum** antes de ejecutar el payload |
 
 --- 
