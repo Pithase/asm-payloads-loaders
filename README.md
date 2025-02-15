@@ -12,8 +12,7 @@ Escribime a: ✉️ `repo-asm-payloads-loaders@pithase.com.ar`
 
 ## 📂 **Ejemplos de Payloads**
 
-### 🟢 **1️⃣ Payloads de Ejemplo**
-Archivos ASM que sirven como base para otros ejemplos.
+### 🟢 **1️⃣ Payloads para Ejemplo**
 
 | 🔗 Archivo | 📏 Tamaño |
 |------------|---------:|
