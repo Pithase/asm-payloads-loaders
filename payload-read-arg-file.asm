@@ -1,4 +1,4 @@
-;=========================================================================================
+;=============================================================================================
 ; Archivo      : payload-read-file.asm
 ; Creado       : 11/02/2025
 ; Modificado   : 11/02/2025
@@ -13,7 +13,13 @@
 ; Linkear      : ld payload-read-arg-file.o -o payload-read-arg-file
 ; Ejecutar     : ./payload-read-arg-file <archivo_payload>
 ; Ejecutar     : ./payload-read-arg-file <archivo_payload> ; echo "Código de salida:" $?
-;=========================================================================================
+;=============================================================================================
+; Licencia MIT:
+; Este código es de uso libre bajo los términos de la Licencia MIT.
+; Puedes usarlo, modificarlo y redistribuirlo, siempre que incluyas esta nota de atribución.
+; NO HAY GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA.
+; Licencia completa en: https://github.com/Pithase/asm-payloads-loaders/blob/main/LICENSE
+;=============================================================================================
 
 section .rodata
     usage_msg db "Uso: ./payload-read-arg-file <archivo_payload>", 10
