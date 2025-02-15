@@ -34,7 +34,7 @@ Cargadores que leen un payload desde un archivo en disco.
 
 ---
 
-### 🟡 **3️⃣ Cargadores de Payload desde HTTP (No HTTPS)**
+### 🟡 **3️⃣ Cargadores de Payload desde HTTP (no HTTPS)**
 Cargadores que obtienen el payload desde una URL HTTP.
 
 | 🔗 Archivo | 📄 Descripción |
