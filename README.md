@@ -9,11 +9,10 @@ Una vez avanzada la serie, publicaré en forma detallada el paso a paso para pod
 ## Contacto  
 
 Si tenés dudas, sugerencias o correcciones, escribime a:  
-✉️ `repo-asm-payloads-loaders@pithase.com.ar`
+✉️ `repo-asm-payloads-loaders@pithase.com.ar`  
+⠀
 
-## Ejemplos de Payloads  
-
-### Payloads para los ejemplos
+## Payloads para los Ejemplos  
 
 | Archivo | Descripción |
 |---------|------------:|
@@ -21,6 +20,7 @@ Si tenés dudas, sugerencias o correcciones, escribime a:
 | [`payload4KBlarger.asm`](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload4KBlarger.asm) | 5.088 bytes |
 
 👉 **[Links de los archivos binarios](https://github.com/Pithase/asm-payloads-loaders/tree/main/bin)**  
+⠀
 
 ## Cargadores de Payload  
 
