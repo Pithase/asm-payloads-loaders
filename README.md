@@ -16,7 +16,7 @@ Si tenés dudas, sugerencias o correcciones, escribime a:
 ### Payloads para los ejemplos
 
 | Archivo | Descripción |
-|---------|-------------|
+|---------|------------:|
 | [`payload.asm`](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload.asm) | 49 bytes |
 | [`payload4KBlarger.asm`](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload4KBlarger.asm) | 5.088 bytes |
 
