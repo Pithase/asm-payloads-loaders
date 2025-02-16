@@ -11,7 +11,7 @@ Una vez avanzada la serie, publicaré en forma detallada el paso a paso para pod
 Si tenés dudas, sugerencias o correcciones, escribime a:  
 ✉️ `repo-asm-payloads-loaders@pithase.com.ar`
 
-## Ejemplos Payloads  
+## Ejemplos de Payloads  
 
 ### Payloads para los ejemplos
 
