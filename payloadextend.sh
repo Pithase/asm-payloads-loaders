@@ -152,7 +152,7 @@ fi
 #----------------------------------------------------------------------------------------------------------------
 # 10. Mensaje de éxito según la acción realizada
 #----------------------------------------------------------------------------------------------------------------
-echo -n "✅ Archivo '$NEW_FILE' generado correctamente. Se agregó información adicional"
+echo -n "✓ Archivo '$NEW_FILE' generado correctamente. Se agregó información adicional"
 
 if $ADD_CHECKSUM && $ADD_SIZE; then
   echo " de checksum y tamaño."
