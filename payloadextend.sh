@@ -28,6 +28,11 @@
 #                │      Payload original      │  Tamaño (3 bytes, LE)  │
 #                └────────────────────────────┴────────────────────────┘
 #
+#                El nombre del archivo generado refleja las opciones utilizadas.
+#                • payload-ext-c.bin  → si se usó --checksum
+#                • payload-ext-s.bin  → si se usó --size
+#                • payload-ext-cs.bin → si se usaron ambos
+#
 # Configuración: Asegurarse de que el script tenga permisos de ejecución:
 #                chmod +x payloadextend.sh
 #
@@ -115,9 +120,18 @@ fi
 SIZE=$(stat -c%s "$LOCAL_FILE")
 
 #----------------------------------------------------------------------------------------------------------------
-# 6. Nombre del nuevo archivo (sufijo -ext)
+# 6. Genera el nombre del nuevo archivo según los argumentos utilizados
 #----------------------------------------------------------------------------------------------------------------
-NEW_FILE="${LOCAL_FILE%.*}-ext.${LOCAL_FILE##*.}"
+EXTENSION=""
+if $ADD_CHECKSUM && $ADD_SIZE; then
+  EXTENSION="-ext-cs"
+elif $ADD_CHECKSUM; then
+  EXTENSION="-ext-c"
+elif $ADD_SIZE; then
+  EXTENSION="-ext-s"
+fi
+
+NEW_FILE="${LOCAL_FILE%.*}${EXTENSION}.${LOCAL_FILE##*.}"
 
 #----------------------------------------------------------------------------------------------------------------
 # 7. Copia el archivo original
