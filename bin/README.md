@@ -33,7 +33,7 @@ Para utilizar los links con **confianza** y asegurarte de que el payload descarg
    - **Para Payloads Extendidos** ([payloadextend.sh](https://github.com/Pithase/asm-payloads-loaders/blob/main/payloadextend.sh) aplicado):
      - Ejecuta el script `payloadextend.sh` para extender el payload:
        ```sh
-       ./payloadextend.sh <nombre_payload_compilado>
+       ./payloadextend.sh [--checksum] [--size] <nombre_payload_compilado>
        ```
      - Calcula el MD5 del archivo generado:
        ```sh
@@ -52,7 +52,7 @@ Para utilizar los links con **confianza** y asegurarte de que el payload descarg
 
 ### Payloads Extendidos ([payloadextend.sh](https://github.com/Pithase/asm-payloads-loaders/blob/main/payloadextend.sh) aplicado)
 
-| Link | MD5 | Tamaño |
-|------|-----|-------:|
-| `http://pithase.com.ar/bin/payload-ext.bin` | `a845f257af8b9145ef61b17d2fb64db6` | 55 bytes |
-| `http://pithase.com.ar/bin/payload4KBlarger-ext.bin` | `7ef1ec1edd3c9080d6a7118afbbaf429` | 5.094 bytes |
+| Link | MD5 | Tamaño | Argumentos |
+|------|-----|-------:|------------|
+| `http://pithase.com.ar/bin/payload-ext.bin` | `a845f257af8b9145ef61b17d2fb64db6` | 55 bytes | --checksum --size |
+| `http://pithase.com.ar/bin/payload4KBlarger-ext.bin` | `7ef1ec1edd3c9080d6a7118afbbaf429` | 5.094 bytes | --checksum --size |
