@@ -31,7 +31,7 @@ Para utilizar los links con **confianza** y asegurarte de que el payload descarg
      - **Compara** el resultado con el MD5 publicado. **Deben ser idénticos**.
 
    - **Para Payloads Extendidos** ([payloadextend.sh](https://github.com/Pithase/asm-payloads-loaders/blob/main/payloadextend.sh) aplicado):
-     - Ejecuta el script `payloadextend.sh` para extender el payload:
+     - Ejecuta el script **payloadextend.sh** para extender el payload:
        ```sh
        ./payloadextend.sh [--checksum] [--size] <nombre_payload_compilado>
        ```
