@@ -29,6 +29,7 @@
 #                └────────────────────────────┴────────────────────────┘
 #
 #                El nombre del archivo generado refleja las opciones utilizadas.
+#                Por ejemplo, si se usa payload.bin, los nombres de los archivos generados serían:
 #                • payload-ext-c.bin  → si se usó --checksum
 #                • payload-ext-s.bin  → si se usó --size
 #                • payload-ext-cs.bin → si se usaron ambos
