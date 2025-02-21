@@ -54,5 +54,5 @@ Para utilizar los links con **confianza** y asegurarte de que el payload descarg
 
 | Link | MD5 | Tamaño | Argumentos |
 |------|-----|-------:|------------|
-| `http://pithase.com.ar/bin/payload-ext.bin` | `a845f257af8b9145ef61b17d2fb64db6` | 55 bytes | --checksum --size |
-| `http://pithase.com.ar/bin/payload4KBlarger-ext.bin` | `7ef1ec1edd3c9080d6a7118afbbaf429` | 5.094 bytes | --checksum --size |
+| `http://pithase.com.ar/bin/payload-ext-cs.bin` | `a845f257af8b9145ef61b17d2fb64db6` | 55 bytes | --checksum --size |
+| `http://pithase.com.ar/bin/payload4KBlarger-ext-cs.bin` | `7ef1ec1edd3c9080d6a7118afbbaf429` | 5.094 bytes | --checksum --size |
