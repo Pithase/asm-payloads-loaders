@@ -1,21 +1,27 @@
 ;===============================================================================================================================================================
 ; Archivo      : payload-read-http-file-size-dynamic-checksum.asm
 ; Creado       : 15/02/2025
-; Modificado   : 15/02/2025
+; Modificado   : 21/02/2025
 ; Autor        : Gastón M. González
 ; Plataforma   : Linux
 ; Arquitectura : x86-64
 ; Descripción  : Loader de payload HTTP (no HTTPS), con payload de tamaño variable, sin límite de tamaño (predefinido en el código) y verificación de checksum
 ;                Descarga un payload con información adicional:
 ;                • Checksum global aditivo sobre el payload (3 bytes, en little endian).
-;                • Longitud del payload (3 bytes, en little endian).
+;                • Tamaño del payload (3 bytes, en little endian).
 ;
 ;                El archivo que de descarga está estructurado de la siguiente manera:
 ;                ┌────────────────────────────┬────────────────────────┬────────────────────────┐
-;                │      Payload original      │ Checksum (3 bytes, LE) │ Longitud (3 bytes, LE) │
+;                │      Payload original      │ Checksum (3 bytes, LE) │  Tamaño (3 bytes, LE)  │
 ;                └────────────────────────────┴────────────────────────┴────────────────────────┘
 ;                La información adicional es incorporada utilizando el script payloadextend.sh
-;                Explicación detallada en https://github.com/Pithase/asm-payloads-loaders/blob/main/bin/README.md
+;
+;                Para este ejemplo, se debe generar el payload con información adicional ejecutando: ./payloadextend.sh --checksum --size <archivo-payload>
+;                Ejemplo: /payloadextend.sh --checksum --size payload4KBlarger.bin
+;
+;                Explicación detallada en:
+;                • https://github.com/Pithase/asm-payloads-loaders/blob/main/bin/README.md
+;                • https://github.com/Pithase/asm-payloads-loaders/blob/main/payloadextend.sh
 ;
 ; Nota         : En el código, el tamaño máximo (headers + payload) está configurado en 16KB a través de buffer_size equ 16384
 ;                Si desea trabajar con un payload de un tamaño distinto, modifica dicho valor (debe ser múltiplo de 4096)
@@ -24,7 +30,6 @@
 ; Linkear      : ld payload-read-http-file-size-dynamic-checksum.o -o payload-read-http-file-size-dynamic-checksum
 ; Ejecutar     : ./payload-read-http-file-size-dynamic-checksum
 ; Ejecutar     : ./payload-read-http-file-size-dynamic-checksum ; echo "Código de salida:" $?
-;
 ;===============================================================================================================================================================
 ; Para probarlo en local se deben hacer los siguientes cambios:
 ;
@@ -149,7 +154,7 @@ done_reading:
     shl edx, 8
     add r13d, edx
     shl ecx, 16
-    add r13d, ecx                  ; Ahora r13d tiene la longitud del payload
+    add r13d, ecx                  ; Ahora r13d tiene la tamaño del payload
 
     ;=============================================================================================
     ; 7. Extraer expected_checksum (3 bytes anteriores a los anteriores)
