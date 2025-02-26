@@ -56,5 +56,5 @@ Para utilizar los links con **confianza** y asegurarte de que el payload descarg
 |------|-----|-------:|------------|
 | `http://pithase.com.ar/bin/payload-ext-cs.bin` | `a845f257af8b9145ef61b17d2fb64db6` | 55 bytes | --checksum --size |
 | `http://pithase.com.ar/bin/payload4KBlarger-ext-cs.bin` | `7ef1ec1edd3c9080d6a7118afbbaf429` | 5.094 bytes | --checksum --size |
-| `http://pithase.com.ar/bin/payload-ext-c.bin` | `aaa75017b8e5e500debe7ccdfc7c5c1a` | 55 bytes | --checksum |
-| `http://pithase.com.ar/bin/payload4KBlarger-ext-c.bin` | `515fc532fb39eada6adcf4aced73b02e` | 5.094 bytes | --checksum|
+| `http://pithase.com.ar/bin/payload-ext-c.bin` | `aaa75017b8e5e500debe7ccdfc7c5c1a` | 52 bytes | --checksum |
+| `http://pithase.com.ar/bin/payload4KBlarger-ext-c.bin` | `515fc532fb39eada6adcf4aced73b02e` | 5.091 bytes | --checksum|
