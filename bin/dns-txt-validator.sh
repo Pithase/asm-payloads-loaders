@@ -16,7 +16,7 @@
 #
 # Uso          : ./dns-txt-validator.sh <nombre-registro-TXT>.<dominio>
 # Ejemplo      : ./dns-txt-validator.sh txt1.pithase.com.ar
-# Salida       : ✓ MD5 del contenido TXT de txt1.pithase.com.ar: fc05eac9527bfbfda76b5ad05b51a4e3
+# Salida       : ✓ MD5 del contenido TXT de payload.pithase.com.ar: eba1ebb72c905624bfa5352636b45a0f
 #================================================================================================================
 # Licencia MIT:
 # Este código es de uso libre bajo los términos de la Licencia MIT.
