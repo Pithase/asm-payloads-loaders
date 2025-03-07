@@ -54,4 +54,3 @@ fi
 #----------------------------------------------------------------------------------------------------------------
 MD5_HASH=$(echo -n "$TXT_DATA" | md5sum | awk '{print $1}')
 echo "✓ MD5 del contenido TXT de $DOMINIO: $MD5_HASH"
-
