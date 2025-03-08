@@ -8,19 +8,30 @@ Para utilizar los links con **confianza** y asegurarte de que el payload descarg
 
 1. **Descargar el payload**  
    Descarga el archivo binario desde el enlace proporcionado.
+   ```sh
+   wget -O <nombre_payload_descargado> <link_payload_descargar>
+   ```
+   ```sh
+   ❯  wget -O payload-http.bin http://pithase.com.ar/bin/payload.bin
+   ``` 
 
-2. **Verificar el MD5 del archivo descargado**  
+3. **Verificar el MD5 del archivo descargado**  
    Ejecuta el siguiente comando para calcular su **hash MD5**:
    ```sh
    md5sum <nombre_payload_descargado>
    ```
+   ```sh
+   ❯  md5sum payload-http.bin
+
+   ❮  0badde3c53e0cf86c52fffa1ea41ef27  payload-http.bin
+   ```      
    **Compara el resultado** con el MD5 publicado en este documento.  
    **Nota:** Si los MD5 no coinciden, **no uses el payload**. Vuelve a descargarlo.
 
-3. **Compilar el payload**  
+4. **Compilar el payload**  
    Compila el payload a partir del código fuente.
 
-4. **Verificar el MD5 según el tipo de payload**  
+5. **Verificar el MD5 según el tipo de payload**  
    Dependiendo del tipo de payload, sigue el procedimiento correspondiente:
 
    - **Para Payloads Estándar** (sin modificaciones):
@@ -28,6 +39,11 @@ Para utilizar los links con **confianza** y asegurarte de que el payload descarg
        ```sh
        md5sum <nombre_payload_compilado>
        ```
+       ```sh
+       ❯  md5sum payload.bin
+
+       ❮  0badde3c53e0cf86c52fffa1ea41ef27  payload.bin
+       ```       
      - **Compara** el resultado con el MD5 publicado. **Deben ser idénticos**.
 
    - **Para Payloads Extendidos** ([payloadextend.sh](https://github.com/Pithase/asm-payloads-loaders/blob/main/payloadextend.sh) aplicado):
@@ -35,10 +51,20 @@ Para utilizar los links con **confianza** y asegurarte de que el payload descarg
        ```sh
        ./payloadextend.sh [--checksum] [--size] <nombre_payload_compilado>
        ```
+       ```sh
+       ❯  ./payloadextend.sh --checksum payload.bin
+
+       ❮  ✓ Archivo 'payload-ext-c.bin' generado correctamente. Se agregó información adicional de checksum. 
+       ```        
      - Calcula el MD5 del archivo generado:
        ```sh
        md5sum <nombre_payload_generado>
        ```
+       ```sh
+       ❯  md5sum payload-ext-c.bin
+
+       ❮  aaa75017b8e5e500debe7ccdfc7c5c1a  payload-ext-c.bin
+       ```       
      - **Compara** el resultado con el MD5 publicado. **Deben ser idénticos**.
     
    - **Para Payloads en Registros TXT de DNS** ([payloadextend.sh](https://github.com/Pithase/asm-payloads-loaders/blob/main/payloadextend.sh) aplicado):
@@ -47,28 +73,28 @@ Para utilizar los links con **confianza** y asegurarte de que el payload descarg
        ./payloadextend.sh [--checksum] [--size] --dns <nombre_payload_compilado>
        ```       
        ```sh
-       ❯ ./payloadextend.sh --checksum --dns payload4KBlarger.bin
+       ❯  ./payloadextend.sh --checksum --dns payload4KBlarger.bin
 
-       ❮ ✓ Archivo 'payload4KBlarger-ext-c.bin' generado correctamente. Se agregó información adicional de checksum.
-       ❮ ✓ Archivo 'payload4KBlarger-ext-c-dns.txt' generado correctamente para su uso en registros TXT de DNS.
+       ❮  ✓ Archivo 'payload4KBlarger-ext-c.bin' generado correctamente. Se agregó información adicional de checksum.
+       ❮  ✓ Archivo 'payload4KBlarger-ext-c-dns.txt' generado correctamente para su uso en registros TXT de DNS.
        ```
      - Calcula el MD5 del archivo generado:
        ```sh
        tr -d ' "' < <nombre_payload_generado> | md5sum
        ```
        ```sh
-       ❯ tr -d ' "' < payload4KBlarger-ext-c-dns.txt | md5sum | awk '{print $1}'
+       ❯  tr -d ' "' < payload4KBlarger-ext-c-dns.txt | md5sum | awk '{print $1}'
 
-       ❮ 3b3a809722e1afd65efee1c4c2a68a66
+       ❮  3b3a809722e1afd65efee1c4c2a68a66
        ```
      - Calcula el MD5 del payload contenido en el registro TXT del DNS:
        ```sh
        ./dns-txt-validator.sh <nombre-registro-TXT>.<dominio>
        ```
        ```sh       
-       ❯ ./dns-txt-validator.sh payload4KBlarger.pithase.com.ar
+       ❯  ./dns-txt-validator.sh payload4KBlarger.pithase.com.ar
 
-       ❮ ✓ MD5 del contenido TXT de payload4KBlarger.pithase.com.ar: 3b3a809722e1afd65efee1c4c2a68a66
+       ❮  ✓ MD5 del contenido TXT de payload4KBlarger.pithase.com.ar: 3b3a809722e1afd65efee1c4c2a68a66
        ```       
      - **Compara** ambos resultados con el MD5 publicado. **Deben ser idénticos**.
 
