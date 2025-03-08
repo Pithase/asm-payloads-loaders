@@ -26,7 +26,7 @@ Para utilizar los links con **confianza** y asegurarte de que el payload descarg
    ❮  0badde3c53e0cf86c52fffa1ea41ef27  payload-http.bin
    ```      
    **Compara el resultado** con el MD5 publicado en este documento.  
-   **Nota:** Si los MD5 no coinciden, **no uses el payload**. Vuelve a descargarlo.
+   **Nota:** Si los MD5 no coinciden, **no uses el payload**. Intenta volviendo a descargarlo.
 
 4. **Compilar el payload**  
    Compila el payload a partir del código fuente.
@@ -54,7 +54,7 @@ Para utilizar los links con **confianza** y asegurarte de que el payload descarg
        ```sh
        ❯  ./payloadextend.sh --checksum payload.bin
 
-       ❮  ✓ Archivo 'payload-ext-c.bin' generado correctamente. Se agregó información adicional de checksum. 
+       ❮  ✓ Archivo 'payload-ext-c.bin' generado correctamente. Se agregó información adicional de checksum.
        ```        
      - Calcula el MD5 del archivo generado:
        ```sh
@@ -73,28 +73,28 @@ Para utilizar los links con **confianza** y asegurarte de que el payload descarg
        ./payloadextend.sh [--checksum] [--size] --dns <nombre_payload_compilado>
        ```       
        ```sh
-       ❯  ./payloadextend.sh --checksum --dns payload4KBlarger.bin
+       ❯  ./payloadextend.sh --checksum --dns payload.bin
 
-       ❮  ✓ Archivo 'payload4KBlarger-ext-c.bin' generado correctamente. Se agregó información adicional de checksum.
-       ❮  ✓ Archivo 'payload4KBlarger-ext-c-dns.txt' generado correctamente para su uso en registros TXT de DNS.
+       ❮  ✓ Archivo 'payload-ext-c.bin' generado correctamente. Se agregó información adicional de checksum.
+       ❮  ✓ Archivo 'payload-ext-c-dns.txt' generado correctamente para su uso en registros TXT de DNS.
        ```
      - Calcula el MD5 del archivo generado:
        ```sh
        tr -d ' "' < <nombre_payload_generado> | md5sum
        ```
        ```sh
-       ❯  tr -d ' "' < payload4KBlarger-ext-c-dns.txt | md5sum | awk '{print $1}'
+       ❯  tr -d ' "' < payload-ext-c-dns.txt | md5sum | awk '{print $1}'
 
-       ❮  3b3a809722e1afd65efee1c4c2a68a66
+       ❮  eba1ebb72c905624bfa5352636b45a0f
        ```
      - Calcula el MD5 del payload contenido en el registro TXT del DNS:
        ```sh
        ./dns-txt-validator.sh <nombre-registro-TXT>.<dominio>
        ```
        ```sh       
-       ❯  ./dns-txt-validator.sh payload4KBlarger.pithase.com.ar
+       ❯  ./dns-txt-validator.sh payload.pithase.com.ar
 
-       ❮  ✓ MD5 del contenido TXT de payload4KBlarger.pithase.com.ar: 3b3a809722e1afd65efee1c4c2a68a66
+       ❮  ✓ MD5 del contenido TXT de payload.pithase.com.ar: eba1ebb72c905624bfa5352636b45a0f
        ```       
      - **Compara** ambos resultados con el MD5 publicado. **Deben ser idénticos**.
 
