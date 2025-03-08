@@ -1,6 +1,8 @@
 # Verificación y Descarga de Payloads
 
-Este documento proporciona los **enlaces de descarga** de los payloads y el procedimiento detallado para verificar su integridad mediante **MD5**, asegurando que corresponden al código fuente publicado.
+Este documento proporciona los **enlaces de descarga** de los payloads y el procedimiento detallado para verificar su integridad mediante **MD5**, asegurando que corresponden al código fuente publicado.     
+
+**Nota:** Si los MD5 no coinciden, **no uses el payload y tampoco el link que lo referencia en ningún programa**.
 
 ## Pasos para verificar un payload
 
@@ -25,8 +27,7 @@ Para utilizar los links con **confianza** y asegurarte de que el payload descarg
 
    ❮  0badde3c53e0cf86c52fffa1ea41ef27  payload-http.bin
    ```      
-   **Compara el resultado** con el MD5 publicado en este documento.  
-   **Nota:** Si los MD5 no coinciden, **no uses el payload**. Intenta volviendo a descargarlo.
+   **Compara** el resultado con el MD5 publicado. **Deben ser idénticos**.  
 
 4. **Compilar el payload**  
    Compila el payload a partir del código fuente.
