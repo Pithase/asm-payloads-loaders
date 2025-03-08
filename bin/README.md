@@ -7,7 +7,7 @@ Este documento proporciona los **enlaces de descarga** de los payloads y el proc
 Para utilizar los links con **confianza** y asegurarte de que el payload descargado es auténtico, sigue estos pasos:
 
 1. **Descargar el payload**  
-   Descarga el archivo binario desde el enlace proporcionado.
+   Descarga el archivo binario desde el [enlace proporcionado](https://github.com/Pithase/asm-payloads-loaders/blob/main/bin/README.md#payloads-est%C3%A1ndar).
    ```sh
    wget -O <nombre_payload_descargado> <link_payload_descargar>
    ```
