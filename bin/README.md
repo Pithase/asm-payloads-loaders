@@ -92,7 +92,7 @@ Para utilizar los links con **confianza** y asegurarte de que el payload descarg
        ./dns-txt-validator.sh <nombre-registro-TXT>.<dominio>
        ```
        ```sh       
-       ❯  ./dns-txt-validator.sh ./dns-txt-validator.sh payload-ext-c-hex.pithase.com.ar
+       ❯  ./dns-txt-validator.sh payload-ext-c-hex.pithase.com.ar
 
        ❮  ✓ MD5 del contenido TXT de payload-ext-c-hex.pithase.com.ar: eba1ebb72c905624bfa5352636b45a0f
        ```       
