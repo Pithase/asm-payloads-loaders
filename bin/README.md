@@ -92,9 +92,9 @@ Para utilizar los links con **confianza** y asegurarte de que el payload descarg
        ./dns-txt-validator.sh <nombre-registro-TXT>.<dominio>
        ```
        ```sh       
-       ❯  ./dns-txt-validator.sh payload-hex.pithase.com.ar
+       ❯  ./dns-txt-validator.sh ./dns-txt-validator.sh payload-ext-c-hex.pithase.com.ar
 
-       ❮  ✓ MD5 del contenido TXT de payload-hex.pithase.com.ar: eba1ebb72c905624bfa5352636b45a0f
+       ❮  ✓ MD5 del contenido TXT de payload-ext-c-hex.pithase.com.ar: eba1ebb72c905624bfa5352636b45a0f
        ```       
      - **Compara** ambos resultados con el MD5 publicado. **Deben ser idénticos**.
 
@@ -120,5 +120,5 @@ Para utilizar los links con **confianza** y asegurarte de que el payload descarg
 
 | Nombre | MD5 | Tamaño | Formato | Argumentos |
 |--------|-----|-------:|---------|------------|
-| `payload-hex.pithase.com.ar` | `eba1ebb72c905624bfa5352636b45a0f` | 106 bytes | hexadecimal | --checksum --dns |
-| `payload4kb-hex.pithase.com.ar` | `3b3a809722e1afd65efee1c4c2a68a66` | 10.304 bytes | hexadecimal | --checksum --dns |
+| `payload-ext-c-hex.pithase.com.ar` | `eba1ebb72c905624bfa5352636b45a0f` | 106 bytes | hexadecimal | --checksum --dns |
+| `payload4KBlarger-ext-c-hex.pithase.com.ar` | `3b3a809722e1afd65efee1c4c2a68a66` | 10.304 bytes | hexadecimal | --checksum --dns |
