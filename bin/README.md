@@ -16,7 +16,7 @@ Para utilizar los links con **confianza** y asegurarte de que el payload descarg
    ``` 
 
 3. **Verificar el MD5 del archivo descargado**  
-   Ejecuta el siguiente comando para calcular su **hash MD5**:
+   Ejecuta el siguiente comando para calcular su **MD5**:
    ```sh
    md5sum <nombre_payload_descargado>
    ```
@@ -92,9 +92,9 @@ Para utilizar los links con **confianza** y asegurarte de que el payload descarg
        ./dns-txt-validator.sh <nombre-registro-TXT>.<dominio>
        ```
        ```sh       
-       ❯  ./dns-txt-validator.sh payload.pithase.com.ar
+       ❯  ./dns-txt-validator.sh payload-hex.pithase.com.ar
 
-       ❮  ✓ MD5 del contenido TXT de payload.pithase.com.ar: eba1ebb72c905624bfa5352636b45a0f
+       ❮  ✓ MD5 del contenido TXT de payload-hex.pithase.com.ar: eba1ebb72c905624bfa5352636b45a0f
        ```       
      - **Compara** ambos resultados con el MD5 publicado. **Deben ser idénticos**.
 
@@ -111,14 +111,14 @@ Para utilizar los links con **confianza** y asegurarte de que el payload descarg
 
 | Link | MD5 | Tamaño | Argumentos |
 |------|-----|-------:|------------|
-| `http://pithase.com.ar/bin/payload-ext-cs.bin` | `a845f257af8b9145ef61b17d2fb64db6` | 55 bytes | --checksum --size |
-| `http://pithase.com.ar/bin/payload4KBlarger-ext-cs.bin` | `7ef1ec1edd3c9080d6a7118afbbaf429` | 5.094 bytes | --checksum --size |
 | `http://pithase.com.ar/bin/payload-ext-c.bin` | `aaa75017b8e5e500debe7ccdfc7c5c1a` | 52 bytes | --checksum |
+| `http://pithase.com.ar/bin/payload-ext-cs.bin` | `a845f257af8b9145ef61b17d2fb64db6` | 55 bytes | --checksum --size |
 | `http://pithase.com.ar/bin/payload4KBlarger-ext-c.bin` | `515fc532fb39eada6adcf4aced73b02e` | 5.091 bytes | --checksum|
+| `http://pithase.com.ar/bin/payload4KBlarger-ext-cs.bin` | `7ef1ec1edd3c9080d6a7118afbbaf429` | 5.094 bytes | --checksum --size |
 
 ### Payloads en Registros TXT de DNS ([payloadextend.sh](https://github.com/Pithase/asm-payloads-loaders/blob/main/payloadextend.sh) aplicado)
 
-| Nombre | MD5 | Tamaño | Argumentos |
-|--------|-----|-------:|------------|
-| `payload.pithase.com.ar` | `eba1ebb72c905624bfa5352636b45a0f` | 106 bytes | --checksum --dns |
-| `payload4KBlarger.pithase.com.ar` | `3b3a809722e1afd65efee1c4c2a68a66` | 10.304 bytes | --checksum --dns |
+| Nombre | MD5 | Tamaño | Formato | Argumentos |
+|--------|-----|-------:|---------|------------|
+| `payload-hex.pithase.com.ar` | `eba1ebb72c905624bfa5352636b45a0f` | 106 bytes | hexadecimal | --checksum --dns |
+| `payload4KBlarger-hex.pithase.com.ar` | `3b3a809722e1afd65efee1c4c2a68a66` | 10.304 bytes | hexadecimal | --checksum --dns |
