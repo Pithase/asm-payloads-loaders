@@ -39,7 +39,7 @@
 #                binario es de 32.764 bytes.
 #
 #                El primer bloque (6 bytes) se utiliza para almacenar el tamaño del payload (en formato little
-#                endian); y a continuación; el archivo binario se divide en bloques de 254 bytes.
+#                endian); y a continuación, el archivo binario se divide en bloques de 254 bytes.
 #
 #                El contenido del archivo generado debe copiarse en el registro TXT del DNS.
 #
