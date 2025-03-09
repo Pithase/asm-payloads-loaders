@@ -121,5 +121,5 @@ Para utilizar los links con **confianza** y asegurarte de que el payload descarg
 
 | Nombre | MD5 | Tamaño | Formato | Argumentos |
 |--------|-----|-------:|---------|------------|
-| `payload-ext-c-hex.pithase.com.ar` | `eba1ebb72c905624bfa5352636b45a0f` | 106 bytes | hexadecimal | --checksum --dns |
-| `payload4KBlarger-ext-c-hex.pithase.com.ar` | `3b3a809722e1afd65efee1c4c2a68a66` | 10.304 bytes | hexadecimal | --checksum --dns |
+| `payload-ext-c-hex.pithase.com.ar` | `eba1ebb72c905624bfa5352636b45a0f` | 110 bytes | hexadecimal | --checksum --dns |
+| `payload4KBlarger-ext-c-hex.pithase.com.ar` | `3b3a809722e1afd65efee1c4c2a68a66` | 10.188 bytes | hexadecimal | --checksum --dns |
