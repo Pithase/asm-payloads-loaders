@@ -3,7 +3,7 @@
 #================================================================================================================
 # Archivo      : payloadextend.sh
 # Creado       : 14/02/2025
-# Modificado   : 07/03/2025
+# Modificado   : 08/03/2025
 # Autor        : Gastón M. González
 # Plataforma   : Linux
 # Arquitectura : x86-64
@@ -29,22 +29,27 @@
 #                └────────────────────────────┴────────────────────────┘
 #
 #                El nombre del archivo generado refleja las opciones utilizadas.
-#                Por ejemplo, si se usa payload.bin, los nombres de los archivos generados serán:
+#                Por ejemplo, si se usa "payload.bin", los nombres de los archivos generados serán:
 #                • payload-ext-c.bin  → si se usó --checksum
 #                • payload-ext-s.bin  → si se usó --size
 #                • payload-ext-cs.bin → si se usaron ambos
 #
 #                Si se usa el argumento --dns, se genera un archivo con el contenido del payload convertido
-#                a hexadecimal, para su uso en registros TXT de DNS. Este argumento admite un tamaño máximo
-#                de 65535 bytes.
-#                
+#                a hexadecimal, para su uso en registros TXT de DNS. El tamaño máximo admitido del archivo
+#                binario es de 32.764 bytes.
+#
+#                El primer bloque (6 bytes) se utiliza para almacenar el tamaño del payload (en formato little
+#                endian); y a continuación; el archivo binario se divide en bloques de 254 bytes.
+#
+#                El contenido del archivo generado debe copiarse en el registro TXT del DNS.
+#
 #                Los nombres de los archivos generados serán:
 #                • payload-dns.txt        → si no utilizó ningún argumento adicional
 #                • payload-ext-c-dns.txt  → si se usó --checksum
 #                • payload-ext-s-dns.txt  → si se usó --size
 #                • payload-ext-cs-dns.txt → si se usaron ambos
 #
-# Configuración: Asegurarse de que el script tenga permisos de ejecución: 
+# Configuración: Asegurarse de que el script tenga permisos de ejecución:
 #                chmod +x payloadextend.sh
 #
 # Uso          : ./payloadextend.sh [--checksum] [--size] [--dns] <archivo-payload>
@@ -203,23 +208,33 @@ if $ADD_CHECKSUM || $ADD_SIZE; then
 fi
 
 #----------------------------------------------------------------------------------------------------------------
-# 12. Genera las cadenas hexadecimales para DNS si está habilitado
+# 12. Genera las cadenas hexadecimales para DNS si está habilitado, anteponiendo la longitud del archivo
 #----------------------------------------------------------------------------------------------------------------
 if $ADD_DNS; then
-  # Si se generó un archivo extendido con -c o -s, usar ese archivo para DNS, sino usar el archivo original
-  DNS_INPUT_FILE="$LOCAL_FILE"
+  # Si se generó un archivo extendido con --checksum o --size, usar ese archivo para DNS; sino, usar el original
   if $ADD_CHECKSUM || $ADD_SIZE; then
     DNS_INPUT_FILE="$NEW_FILE"
+  else
+    DNS_INPUT_FILE="$LOCAL_FILE"
   fi
 
   # Verifica si el archivo excede los 65535 bytes antes de generar el DNS
   FILE_SIZE=$(stat -c%s "$DNS_INPUT_FILE")
-  if [ "$FILE_SIZE" -gt 65535 ]; then
+  if [ "$FILE_SIZE" -gt 32764 ]; then
     echo "x ERROR: No se generó el archivo DNS porque el tamaño del archivo ($FILE_SIZE bytes) excede el límite de 65535 bytes."
     exit 1
   fi
 
-  # Genera el archivo DNS si el tamaño es válido
-  hexdump -ve '1/1 "%02x"' "$DNS_INPUT_FILE" | fold -w254 | sed 's/.*/"&"/' | tr '\n' ' ' > "$DNS_FILE"
+  # Calcula los 3 bytes (6 caracteres hex) de la longitud en formato little endian
+  B0=$(( FILE_SIZE        & 0xFF ))
+  B1=$(( (FILE_SIZE >> 8)  & 0xFF ))
+  B2=$(( (FILE_SIZE >>16) & 0xFF ))
+  DNS_SIZE_HEX=$(printf '%02x%02x%02x' "$B0" "$B1" "$B2")
+
+  # Genera el contenido hexadecimal del archivo (agrupado en bloques de 254 caracteres entre comillas, separados por un espacio)
+  HEX_CONTENT=$(hexdump -ve '1/1 "%02x"' "$DNS_INPUT_FILE" | fold -w254 | sed 's/.*/"&"/' | tr '\n' ' ')
+
+  # Prepara el archivo DNS, anteponiendo el bloque DNS_SIZE_HEX entre comillas, seguido de un espacio y luego el contenido hexadecimal
+  echo -n "\"${DNS_SIZE_HEX}\" ${HEX_CONTENT}" > "$DNS_FILE"
   echo "✓ Archivo '$DNS_FILE' generado correctamente para su uso en registros TXT de DNS."
 fi
