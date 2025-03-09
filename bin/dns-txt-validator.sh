@@ -3,7 +3,7 @@
 #================================================================================================================
 # Archivo      : dns-txt-validator.sh
 # Creado       : 07/03/2025
-# Modificado   : 07/03/2025
+# Modificado   : 08/03/2025
 # Autor        : Gastón M. González
 # Plataforma   : Linux
 # Arquitectura : x86-64
@@ -50,7 +50,8 @@ if [ -z "$TXT_DATA" ]; then
 fi
 
 #----------------------------------------------------------------------------------------------------------------
-# 4. Calcula y muestra el MD5
+# 4. Calcula y muestra el MD5 (ignora los primeros 6 caracteres que contienen el tamaño del payload)
 #----------------------------------------------------------------------------------------------------------------
-MD5_HASH=$(echo -n "$TXT_DATA" | md5sum | awk '{print $1}')
+TXT_DATA_CLEAN="${TXT_DATA:6}"
+MD5_HASH=$(echo -n "$TXT_DATA_CLEAN" | md5sum | awk '{print $1}')
 echo "✓ MD5 del contenido TXT de $DOMINIO: $MD5_HASH"
