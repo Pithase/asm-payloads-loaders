@@ -3,15 +3,15 @@
 #================================================================================================================
 # Archivo      : dns-txt-validator.sh
 # Creado       : 07/03/2025
-# Modificado   : 08/03/2025
+# Modificado   : 09/03/2025
 # Autor        : Gastón M. González
 # Plataforma   : Linux
 # Arquitectura : x86-64
-# Descripción  : Obtiene el contenido de un registro TXT de un dominio a través de servidores DNS públicos, 
-#                eliminando comillas y espacios antes de calcular el hash MD5 del contenido. 
-#                Utiliza el servidor de Google (8.8.8.8) para garantizar respuestas consistentes. 
+# Descripción  : Obtiene el contenido de un registro TXT de un dominio a través de servidores DNS públicos,
+#                eliminando comillas y espacios antes de calcular el hash MD5 del contenido.
+#                Utiliza el servidor de Google (8.8.8.8) para garantizar respuestas consistentes.
 #
-# Configuración: Asegurarse de que el script tenga permisos de ejecución: 
+# Configuración: Asegurarse de que el script tenga permisos de ejecución:
 #                chmod +x dns-txt-validator.sh
 #
 # Uso          : ./dns-txt-validator.sh <nombre-registro-TXT>.<dominio>
@@ -54,4 +54,6 @@ fi
 #----------------------------------------------------------------------------------------------------------------
 TXT_DATA_CLEAN="${TXT_DATA:6}"
 MD5_HASH=$(echo -n "$TXT_DATA_CLEAN" | md5sum | awk '{print $1}')
+TXT_LENGTH=$(echo -n "$TXT_DATA" | wc -c)
 echo "✓ MD5 del contenido TXT de $DOMINIO: $MD5_HASH"
+echo "✓ Tamaño del contenido TXT: ${TXT_LENGTH} bytes"
