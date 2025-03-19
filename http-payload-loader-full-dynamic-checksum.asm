@@ -1,7 +1,7 @@
 ;========================================================================================================================================================
 ; Archivo      : http-payload-loader-full-dynamic-checksum.asm
 ; Creado       : 26/02/2025
-; Modificado   : 26/02/2025
+; Modificado   : 19/03/2025
 ; Autor        : Gastón M. González
 ; Plataforma   : Linux
 ; Arquitectura : x86-64
@@ -23,7 +23,7 @@
 ;
 ;                Explicación detallada en:
 ;                • https://github.com/Pithase/asm-payloads-loaders/blob/main/bin/README.md
-;                • https://github.com/Pithase/asm-payloads-loaders/blob/main/payloadextend.sh
+;                • https://github.com/Pithase/asm-payloads-loaders/blob/main/bin/payloadextend.sh
 ;
 ; Compilar     : nasm -f elf64 http-payload-loader-full-dynamic-checksum.asm -o http-payload-loader-full-dynamic-checksum.o
 ; Linkear      : ld http-payload-loader-full-dynamic-checksum.o -o http-payload-loader-full-dynamic-checksum
@@ -120,6 +120,8 @@ _start:
     mov rsi, rsp                         ; puntero a la estructura sockaddr_in (dirección del servidor)
     mov rdx, 16                          ; tamaño de la estructura sockaddr_in (16 bytes para IPv4)
     syscall
+
+    add rsp, 16                          ; limpia la pila después de usar sockaddr_in
 
     test rax, rax                        ; verifica si la conexión fue exitosa
     js connect_error                     ; si no fue exitosa, salta al manejo de error
