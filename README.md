@@ -14,9 +14,9 @@ Si tenés dudas, sugerencias o correcciones, escribime a:
 
 ## Payloads para los Ejemplos  
 
-| Archivo | Descripción |
-|---------|------------:|
-| [`payload.asm`](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload.asm) | 49 bytes |
+| Archivo | Descripción | Video |
+|---------|------------:|-------|
+| [`payload.asm`](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload.asm) | 49 bytes | [`Ir a verlo`](https://www.youtube.com/watch?v=WlPRBZxzqQ8) |
 | [`payload4KBlarger.asm`](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload4KBlarger.asm) | 5.088 bytes |
 
 👉 **[Links de los archivos binarios](https://github.com/Pithase/asm-payloads-loaders/tree/main/bin)**  
