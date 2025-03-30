@@ -17,7 +17,7 @@ Si tenés dudas, sugerencias o correcciones, escribime a:
 | Archivo | Descripción | Video |
 |---------|------------:|-------|
 | [`payload.asm`](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload.asm) | 49 bytes | <a href="https://www.youtube.com/watch?v=WlPRBZxzqQ8" target="_blank">Ir a verlo</a> |
-| [`payload4KBlarger.asm`](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload4KBlarger.asm) | 5.088 bytes |
+| [`payload4KBlarger.asm`](https://github.com/Pithase/asm-payloads-loaders/blob/main/payload4KBlarger.asm) | 5.088 bytes | <a href="https://www.youtube.com/watch?v=J9Zz03EN7mc" target="_blank">Ir a verlo</a> |
 
 👉 **[Links de los archivos binarios](https://github.com/Pithase/asm-payloads-loaders/tree/main/bin)**  
 ⠀
