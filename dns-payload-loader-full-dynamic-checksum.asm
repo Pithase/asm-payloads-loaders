@@ -1,4 +1,3 @@
-```nasm
 ;===========================================================================================================================================================
 ; Archivo      : dns-payload-loader-full-dynamic-checksum.asm
 ; Creado       : 19/03/2025
@@ -573,4 +572,3 @@ payload_size_hex_to_int:
 
     mov [payload_size], rax              ; guarda tamaño del payload
     ret
-```
