@@ -523,9 +523,9 @@ convert_hex_to_byte:
 
 
     ;==========================================================================================================================================
-    ; 17. Convierte un carácter ASCII (almacenado en AL) a su valor numérico (0-15)
-    ;     Entrada: AL = carácter ('0'-'9', 'a'-'f')
-    ;     Salida : AL = valor numérico (0-15)
+    ; 17. Convierte un carácter ASCII (almacenado en DL) a su valor numérico (0-15)
+    ;     Entrada: DL = carácter ('0'-'9', 'a'-'f')
+    ;     Salida : DL = valor numérico (0-15)
     ;     Se asume que las letras siempre están en minúsculas
     ;==========================================================================================================================================
 hex_to_int:
