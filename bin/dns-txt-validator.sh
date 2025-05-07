@@ -3,7 +3,7 @@
 #================================================================================================================
 # Archivo      : dns-txt-validator.sh
 # Creado       : 07/03/2025
-# Modificado   : 09/03/2025
+# Modificado   : 06/05/2025
 # Autor        : Gastón M. González
 # Plataforma   : Linux
 # Arquitectura : x86-64
@@ -15,8 +15,8 @@
 #                chmod +x dns-txt-validator.sh
 #
 # Uso          : ./dns-txt-validator.sh <nombre-registro-TXT>.<dominio>
-# Ejemplo      : ./dns-txt-validator.sh txt1.pithase.com.ar
-# Salida       : ✓ MD5 del contenido TXT de payload.pithase.com.ar: eba1ebb72c905624bfa5352636b45a0f
+# Ejemplo      : ./dns-txt-validator.sh payload-ext-c-hex.pithase.com.ar
+# Salida       : ✓ MD5 del contenido TXT de payload-ext-c-hex.pithase.com.ar: eba1ebb72c905624bfa5352636b45a0f
 #                ✓ Tamaño del contenido TXT: 110 bytes
 #================================================================================================================
 # Licencia MIT:
