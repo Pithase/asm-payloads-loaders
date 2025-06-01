@@ -43,7 +43,7 @@ Buscar definiciones de tipo:
 `$ grep __dev_t /usr/include/x86_64-linux-gnu/bits/types.h`
 
 ```
-__STD_TYPE __DEV_T_TYPE __dev_t;        /* Tipo para números de dispositivo. */
+__STD_TYPE __DEV_T_TYPE __dev_t;        /* Type of device numbers.  */
 ```
 
 2. **`/usr/include/x86_64-linux-gnu/bits/typesizes.h`**
