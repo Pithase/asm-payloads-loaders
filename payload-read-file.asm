@@ -1,7 +1,7 @@
 ;=============================================================================================
 ; Archivo      : payload-read-file.asm
 ; Creado       : 10/02/2025
-; Modificado   : 10/02/2025
+; Modificado   : 01/06/2025
 ; Autor        : Gastón M. González
 ; Plataforma   : Linux
 ; Arquitectura : x86-64
@@ -18,6 +18,9 @@
 ; Puedes usarlo, modificarlo y redistribuirlo, siempre que incluyas esta nota de atribución.
 ; NO HAY GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA.
 ; Licencia completa en: https://github.com/Pithase/asm-payloads-loaders/blob/main/LICENSE
+;=============================================================================================
+; Referencia:
+; https://github.com/Pithase/asm-payloads-loaders/blob/main/structures.md#struct-stat
 ;=============================================================================================
 
 section .rodata
