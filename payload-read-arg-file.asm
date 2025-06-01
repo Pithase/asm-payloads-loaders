@@ -20,6 +20,9 @@
 ; NO HAY GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA.
 ; Licencia completa en: https://github.com/Pithase/asm-payloads-loaders/blob/main/LICENSE
 ;=============================================================================================
+; Referencia:
+; https://github.com/Pithase/asm-payloads-loaders/blob/main/structures.md#struct-stat
+;=============================================================================================
 
 section .rodata
     usage_msg db "Uso: ./payload-read-arg-file <archivo_payload>", 10
@@ -58,7 +61,7 @@ _start:
     ;=========================================================================
     ; 3. Obtiene el tamaño del archivo mediante fstat
     ;=========================================================================
-    mov rax, 5              ; syscall: fstat
+    mov rax, 5              ; syscall: fstat 
     mov rdi, [fd]           ; descriptor de archivo
     lea rsi, [statbuf]      ; dirección del buffer para struct stat
     syscall
