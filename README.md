@@ -11,6 +11,11 @@ Una vez avanzada la serie, publicaré en forma detallada el paso a paso para pod
 Si tenés dudas, sugerencias o correcciones, escribime a:  
 ✉️ `repo-asm-payloads-loaders@pithase.com.ar`  
 ⠀
+## Estructuras utilizadas en los Programas
+
+👉 **[stat](https://github.com/Pithase/asm-payloads-loaders/blob/main/structures.md#struct-stat)**  
+⠀
+
 
 ## Payloads para los Ejemplos  
 
